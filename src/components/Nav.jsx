@@ -1,11 +1,12 @@
-import React from 'react'
-import logo from "../img/logo.png"
+import React from "react";
+import logo from "../img/logo.png";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <nav>
-      <div>
-        <a href="/">
+    <nav className="navbar navbar-expand-md navbar-light">
+      <div className="container-fluid">
+        <a href="/" className="navbar-brand">
           <img src={logo} alt="Logo" />
         </a>
         <button
@@ -17,8 +18,44 @@ const Nav = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
       </div>
+      <ul>
+        <li>
+          <NavLink
+            style={({ isActive }) => ({ color: isActive && "red" })}
+            to="/"
+            className="nav-link active"
+            aria-current="page"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            style={({ isActive }) => ({ color: isActive && "red" })}
+            to="/people"
+            className="nav-link"
+            aria-current="page"
+          >
+            People
+          </NavLink>
+          <NavLink
+            style={({ isActive }) => ({ color: isActive && "red" })}
+            to="/paths"
+            className="nav-link"
+            aria-current="page"
+          >
+            Paths
+          </NavLink>
+          <NavLink
+            style={({ isActive }) => ({ color: isActive && "red" })}
+            to="/contact"
+            className="nav-link"
+            aria-current="page"
+          >
+            Contact
+          </NavLink>
+        </li>
+      </ul>
     </nav>
   );
-}
+};
 
-export default Nav
+export default Nav;
