@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../img/logo.png";
 import { NavLink } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 const Nav = () => {
   return (
@@ -9,14 +10,14 @@ const Nav = () => {
         <a href="/" className="navbar-brand">
           <img src={logo} alt="Logo" />
         </a>
-        <button
+        <Button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
         >
           <span className="navbar-toggler-icon"></span>
-        </button>
+        </Button>
       </div>
       <ul>
         <li>

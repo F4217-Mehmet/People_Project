@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaGlobeAmericas, FaHeadset, FaBookOpen } from "react-icons/fa";
 
+
 const About = () => {
   return (
     <article className='container p-3'>
