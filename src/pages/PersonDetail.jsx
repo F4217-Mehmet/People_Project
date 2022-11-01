@@ -2,7 +2,7 @@ import { useParams, useLocation, useNavigate} from "react-router-dom";
 import { useState, useEffect } from 'react';
 
 const PersonDetail = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   //!Linkteki parametreyi almak için useParams Hook'u kullanılabilir.
   const { id } = useParams();
 
@@ -11,10 +11,7 @@ const PersonDetail = () => {
   // const { state: person }= useLocation();
 
   const [person, setPerson] = useState("");
-  const navigate = useNavigate();
-
-  
-
+ 
   useEffect(() => {
         fetch(`https://reqres.in/api/users/${id}`)
       .then((res) => res.json())
