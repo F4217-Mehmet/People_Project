@@ -1,15 +1,15 @@
 import React from "react";
 import logo from "../img/logo.png";
-import { NavLink } from "react-router-dom";
+import { Link,  NavLink } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 
 const Nav = () => {
   return (
     <nav className="navbar navbar-expand-md navbar-light">
       <div className="container-fluid">
-        <a href="/" className="navbar-brand">
+        <NavLink to="/" className="navbar-brand">
           <img src={logo} alt="Logo" />
-        </a>
+        </NavLink>
         <Button
           className="navbar-toggler"
           type="button"
